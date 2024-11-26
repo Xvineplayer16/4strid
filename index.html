@@ -1,37 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Layout with Containers</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4strid Profile Card</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #2c2f48;
+            font-family: 'Inter', 'Poppins', 'Roboto', sans-serif;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        .profile-card {
+            background-color: #3b4b7c;
+            border-radius: 15px;
+            padding: 20px;
+            width: 350px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .profile-card img {
+            width: 100%;
+            border-radius: 15px;
+        }
+        .profile-card h1 {
+            font-size: 2em;
+            margin: 10px 0;
+        }
+        .profile-card p {
+            margin: 10px 0;
+        }
+        .profile-card .section {
+            background-color: #4a5a8c;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .profile-card .section h2 {
+            margin: 0;
+            font-size: 1.2em;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <!-- Left Container -->
-    <div class="left-container">
-      <div class="color-box" style="background-color: #3498db;"></div>
-      <img src="https://via.placeholder.com/150" alt="Image" class="image">
-      <h1 class="title">Main Title</h1>
-      <h2 class="subtitle">Main Subtitle</h2>
-      <p class="text">This is the main text inside the left container. Here you can add additional content, information, or anything relevant.</p>
+    <div class="profile-card">
+        <img src="your-image-url-here" alt="Profile Image">
+        <h1>4strid</h1>
+        <p>Discord - Cyb3rly_h1gh</p>
+        <p>GitHub - Xvineplayer16</p>
+        <div class="section">
+            <h2>WELCOME, I'M 4STRID</h2>
+            <p>he/him, they/them (if you’re a random person).</p>
+            <p>my birthday is in 6/18!!</p>
+            <p>I'm a minor!!!</p>
+        </div>
+        <div class="section">
+            <h2>ABOUT ME</h2>
+            <p>Hey there I’m a 14 year old front end developer who is currently learning Astro!!! I’ve been coding since I was 5, from Scratch to Jsbin then to GitHub. I am mostly on discord on weekends or breaks</p>
+        </div>
+        <div class="section">
+            <h2>CURRENT CODING LANGUAGES I KNOW</h2>
+            <p>Hey there I’m 14 year old front end developer who is currently learning Astro!!! I’ve been coding since I was 5, from Scratch to Jsbin then to GitHub. I am mostly on discord on weekends or breaks</p>
+        </div>
+        <div class="section">
+            <h2>ADDITIONAL INFO</h2>
+            <p>Explore more about my work, hobbies, and interests!</p>
+        </div>
+        <div class="section">
+            <h2>MADE BY 4STRID</h2>
+        </div>
     </div>
-
-    <!-- Right Containers -->
-    <div class="right-container">
-      <div class="right-box">
-        <h2 class="subtitle">Right Box 1</h2>
-        <p class="text">This is the content for the first right box.</p>
-      </div>
-      <div class="right-box">
-        <h2 class="subtitle">Right Box 2</h2>
-        <p class="text">This is the content for the second right box.</p>
-      </div>
-      <div class="right-box">
-        <h2 class="subtitle">Right Box 3</h2>
-        <p class="text">This is the content for the third right box.</p>
-      </div>
-    </div>
-  </div>
 </body>
 </html>
