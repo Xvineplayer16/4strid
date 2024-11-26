@@ -1,77 +1,95 @@
-/* styles.css */
+/* General Styles */
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #1E2A47;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1E2A4A;
+    color: white;
 }
 
 .container {
-  background-color: #30497B;
-  border-radius: 15px;
-  padding: 20px;
-  width: 80%;
-  max-width: 800px;
-  text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
 }
 
+/* Header */
 .header {
-  display: flex;
-  justify-content: space-between;
-  color: #A5B9E1;
-  margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
-.profile-image img {
-  width: 100%;
-  max-width: 250px;
-  border-radius: 10px;
-  margin: 0 auto;
+.header .time, .header .date {
+    background-color: #2D3A62;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 18px;
 }
 
-.content {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+/* Profile Section */
+.profile {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.info {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+.image-section img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 20px;
 }
 
-.section {
-  background-color: #5C7DA8;
-  border-radius: 10px;
-  padding: 15px;
+/* Cards */
+.text-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
 }
 
-h2 {
-  margin: 0 0 10px;
+.card {
+    background-color: #3B4E78;
+    padding: 15px 20px;
+    border-radius: 10px;
+    text-align: left;
 }
 
-footer {
-  margin-top: 20px;
-  color: #A5B9E1;
+.card h2 {
+    margin: 0 0 10px;
+    font-size: 22px;
 }
 
-footer h1 {
-  font-size: 2rem;
-  margin-bottom: 10px;
+.card p {
+    margin: 0;
+    line-height: 1.6;
 }
 
-footer p {
-  margin: 5px 0;
+/* Footer */
+.footer {
+    margin-top: 20px;
 }
 
-footer small {
-  display: block;
-  margin-top: 15px;
-  font-size: 0.8rem;
-  color: #A5B9E1;
+.footer h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+.footer p {
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-section {
+        max-width: 100%;
+    }
 }
