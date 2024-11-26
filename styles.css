@@ -1,95 +1,88 @@
-/* General Styles */
+/* General Layout */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #1E2A4A;
-    color: white;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  background-color: #f0f0f0;
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 1200px;
+  gap: 20px;
 }
 
-/* Header */
-.header {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
+/* Left Container */
+.left-container {
+  flex: 1;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.header .time, .header .date {
-    background-color: #2D3A62;
-    padding: 10px 20px;
-    border-radius: 10px;
-    font-size: 18px;
+.color-box {
+  width: 100%;
+  height: 50px;
+  border-radius: 8px;
+  margin-bottom: 15px;
 }
 
-/* Profile Section */
-.profile {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
+.image {
+  width: 100%;
+  max-width: 150px;
+  margin-bottom: 15px;
 }
 
-.image-section img {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 20px;
+.title {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
 }
 
-/* Cards */
-.text-section {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    max-width: 600px;
+.subtitle {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 10px;
 }
 
-.card {
-    background-color: #3B4E78;
-    padding: 15px 20px;
-    border-radius: 10px;
-    text-align: left;
+.text {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
 }
 
-.card h2 {
-    margin: 0 0 10px;
-    font-size: 22px;
+/* Right Containers */
+.right-container {
+  flex: 0 0 30%;
 }
 
-.card p {
-    margin: 0;
-    line-height: 1.6;
+.right-box {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Footer */
-.footer {
-    margin-top: 20px;
+.right-box .subtitle {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
 }
 
-.footer h1 {
-    margin: 0;
-    font-size: 36px;
-}
-
-.footer p {
-    margin: 5px 0;
-    font-size: 18px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .profile {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .text-section {
-        max-width: 100%;
-    }
+.right-box .text {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
 }
