@@ -3,16 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Container Layout</title>
+    <title>Enhanced Container Layout</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
             display: flex;
             justify-content: space-between;
             height: 100vh;
+            font-family: 'Inter', 'Poppins', 'Roboto', sans-serif;
+            background: linear-gradient(to right, #e0eafc, #cfdef3);
+            margin: 0;
+            padding: 20px;
         }
         .left-container, .right-containers {
-            border: 1px solid #000;
-            padding: 10px;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         .left-container {
             flex-basis: 30%;
@@ -27,18 +35,56 @@
             justify-content: space-between;
         }
         .right-container {
-            border: 1px solid #000;
+            border: 1px solid #ccc;
             margin-bottom: 10px;
-            flex-grow: 1;
+            padding: 15px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .right-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
         .right-container:last-child {
             margin-bottom: 0;
+        }
+        h1, h2, p {
+            margin: 0;
+            padding: 5px 0;
+        }
+        h1 {
+            font-size: 1.5em;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            font-size: 1.2em;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+        img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        .gradient-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+            border-radius: 10px;
         }
     </style>
 </head>
 <body>
     <div class="left-container">
-        <img src="your-image.jpg" alt="Image" style="width: 100%;">
+        <div style="position: relative;">
+            <img src="your-image.jpg" alt="Image">
+            <div class="gradient-overlay"></div>
+        </div>
         <h1>Title</h1>
         <h2>Subtitle</h2>
         <p>Some text here</p>
